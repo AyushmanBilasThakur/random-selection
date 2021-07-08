@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Selector</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="container fb">
+            <h1>Random Selector</h1>
+            <div class="toggler">
+                <button id="toggler" class="btn-secondary">Toggle Theme</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+
+            <div class="error-box" id="error-box">
+                <div class="error">
+                    <p>You Need to add at least 1 name to get started </p>
+                    <button><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h3>List of names</h3>
+
+                    <div class="add_name">
+                        <input type="text" name="name" id="name" placeholder="Please enter name to add...."/>
+                        <button class="btn-primary" id="name-add-button">Add Name</button>
+                    </div>
+
+                    <ul id="name-list">
+                        <li>
+                            <button class="btn-danger"><i class="fas fa-times"></i></button>
+                            <p>Name 1</p>
+                        </li>
+                        <li>
+                            <button class="btn-danger"><i class="fas fa-times"></i></button>
+                            <p>Super Long Name</p>
+                        </li>
+                        <li>
+                            <button class="btn-danger"><i class="fas fa-times"></i></button>
+                            <p>Name 3</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h3>Number of Items to select</h3>
+                    
+                    <div class="add_name">
+                        <input type="number" name="number" id="number" placeholder="Please enter number of items to select"/>
+                        <button id="update-selection-number" class="btn-primary">Update Selection Number</button>
+                    </div>
+
+                    <p id="meta" class="small">Currently Selecting 1 out of 3 elements</p>
+
+                    <div class="add_name">
+                        <input type="text" name="sep" id="sep" placeholder="Enter a seperator"/>
+                        <button id="update-selector" class="btn-primary">Update Seperator</button>
+                    </div>
+
+                    <p id="meta2" class="small">Currently seperating selected items with "=>"</p>
+
+                    <button id="cta" class="btn-success lg">Select Item(s) from List</button>
+                    
+                    <div>
+                        <h3>Selected Item(s) are: </h3>
+                        <p id="selected-names">Super Long Name</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="flex">
+                <button id="save" class="btn-primary d-block">Save This Session</button>
+
+                <button id="load" class="btn-secondary d-block">Load Last Session</button>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="bottom-nav">
+            <a href="/" class="active">Home</a>
+            <a href="/about.html">About</a>
+        </div>
+        <p>Made with ❤️ by Ayushman Bilas Thakur</p>
+    </footer>
+
+    <script src="ld.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
