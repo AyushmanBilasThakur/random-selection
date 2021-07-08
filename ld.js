@@ -12,5 +12,14 @@ theme_toggler.addEventListener("click", () => {
     body.classList.add(theme);
 
     localStorage.setItem("theme", theme)
-
 })
+
+
+//sw initialization
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register("sw.js")
+        .then(sw => console.log("Service work registration successful"))
+        .catch(err => console.log("Error"))
+} else {
+    console.log("Service Worker not supported!")
+}
